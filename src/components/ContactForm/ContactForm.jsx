@@ -10,7 +10,6 @@ const ContactForm = () => {
   const dispatch = useDispatch();
 
   const handleAddContact = (values, actions) => {
-    console.log(values);
     dispatch(addContact(values));
 
     actions.resetForm();
