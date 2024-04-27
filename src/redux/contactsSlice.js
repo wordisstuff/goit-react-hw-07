@@ -54,11 +54,16 @@ const contactsSlice = createSlice({
       state.loading = false;
       state.error = action.payload;
     })
+
   },
 });
 
 // Редюсер слайсу
 export const contactsReducer = contactsSlice.reducer;
+
+export const  selectLoading = state => {
+  return state.contacts.loading
+}
 
 export const selectContacts = state => {
   return state.contacts.items
